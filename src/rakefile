@@ -1,0 +1,28 @@
+require 'albacore'
+require 'version'
+
+ASSEMBLY_INFO = 'src/web/Properties/AssemblyInfo.cs'
+SOLUTION_FILE = 'SimpleBudget.sln'
+
+task :default => [ :version, :build, :test ]
+
+desc 'Increment the file and assembly version'
+assemblyinfo :version do |asm|
+  asm.version = '1.0.0'
+  asm.file_version = '1.0.0'
+  asm.input_file = ASSEMBLY_INFO
+  asm.output_file = ASSEMBLY_INFO
+end
+
+desc 'Build the solution in the Release configuration'
+msbuild :build do |msb|
+  msb.solution = SOLUTION_FILE
+  msb.targets = [ :Clean, :Build ]
+  msb.properties = { :Configuration => 'Release' }
+end
+
+desc 'Run all of the nunit test assemblies'
+nunit :test do |nunit|
+  nunit.command = 'path/to/nunit-console.exe'
+  nunit.assemblies = Dir.glob '**/bin/Release/*.Tests.dll'
+end

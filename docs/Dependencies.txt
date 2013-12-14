@@ -1,0 +1,29 @@
+-----------------------------------------------------------------
+- PROJECT DEPENDENCIES
+- Contains a list and descriptions of all external dependencies.
+-----------------------------------------------------------------
+
+Ruby
+	- at least version 1.8.7
+	- http://rubyinstaller.org/
+	- Used by the RAKE script for building the solution
+	- Used by SpecWatchr for countinuous test running
+
+Growl for Windows
+	- http://www.growlforwindows.com/gfw/
+	- Used by SpecWatcher to display results of continuous test runs
+
+SpecWatchr
+	- http://nspec.org/continuoustesting/
+	- Use for continuous test running
+
+
+Ruby Gems
+-------------
+Rake
+	- Used for build scripts
+albacore
+	- Helpers for the Build scripts
+version
+	- Used by build scripts to version assemblies
+

@@ -1,0 +1,4 @@
+C:\Code\SimpleBudget\src\lib\library\bin\Debug\SimpleBudget.Library.dll
+C:\Code\SimpleBudget\src\lib\library\bin\Debug\SimpleBudget.Library.pdb
+C:\Code\SimpleBudget\src\lib\library\obj\Debug\SimpleBudget.Library.dll
+C:\Code\SimpleBudget\src\lib\library\obj\Debug\SimpleBudget.Library.pdb

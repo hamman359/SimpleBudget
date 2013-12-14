@@ -1,0 +1,11 @@
+--------------------------------------------------------------------------------
+- Style Guide
+- Contains a list of the formatting and style guidelines that should be followed
+- throughout this project. 
+--------------------------------------------------------------------------------
+
+Indentation
+--------------
+Indentation should use tabs NOT spaces. The use of tabs allows each developer to set their IDE's tab size to whatever value they wish. This allows each Dev to customize their indentation sizing to their individual preference.
+
+Block statements, case labels and case contents should all be indented one level.

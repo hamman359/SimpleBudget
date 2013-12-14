@@ -1,0 +1,5 @@
+C:\Code\SimpleBudget\src\tests\TestLibrary\bin\Debug\SimpleBudget.TestLibrary.dll
+C:\Code\SimpleBudget\src\tests\TestLibrary\bin\Debug\SimpleBudget.TestLibrary.pdb
+C:\Code\SimpleBudget\src\tests\TestLibrary\obj\Debug\TestLibrary.csprojResolveAssemblyReference.cache
+C:\Code\SimpleBudget\src\tests\TestLibrary\obj\Debug\SimpleBudget.TestLibrary.dll
+C:\Code\SimpleBudget\src\tests\TestLibrary\obj\Debug\SimpleBudget.TestLibrary.pdb
