@@ -1,5 +1,0 @@
-C:\Code\SimpleBudget\src\tests\UnitTests\bin\Debug\SimpleBudget.UnitTests.dll
-C:\Code\SimpleBudget\src\tests\UnitTests\bin\Debug\SimpleBudget.UnitTests.pdb
-C:\Code\SimpleBudget\src\tests\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
-C:\Code\SimpleBudget\src\tests\UnitTests\obj\Debug\SimpleBudget.UnitTests.dll
-C:\Code\SimpleBudget\src\tests\UnitTests\obj\Debug\SimpleBudget.UnitTests.pdb

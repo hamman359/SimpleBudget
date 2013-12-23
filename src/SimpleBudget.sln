@@ -30,6 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{AE71E619-6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48920FF3-A27B-44EC-B055-3BEDCBF3F573}"
 	ProjectSection(SolutionItems) = preProject
+		.semver = .semver
+		Gemfile = Gemfile
 		rakefile = rakefile
 	EndProjectSection
 EndProject

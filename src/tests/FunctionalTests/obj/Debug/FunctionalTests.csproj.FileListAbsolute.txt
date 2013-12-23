@@ -1,5 +1,0 @@
-C:\Code\SimpleBudget\src\tests\FunctionalTests\bin\Debug\SimpleBudget.FunctionalTests.dll
-C:\Code\SimpleBudget\src\tests\FunctionalTests\bin\Debug\SimpleBudget.FunctionalTests.pdb
-C:\Code\SimpleBudget\src\tests\FunctionalTests\obj\Debug\FunctionalTests.csprojResolveAssemblyReference.cache
-C:\Code\SimpleBudget\src\tests\FunctionalTests\obj\Debug\SimpleBudget.FunctionalTests.dll
-C:\Code\SimpleBudget\src\tests\FunctionalTests\obj\Debug\SimpleBudget.FunctionalTests.pdb

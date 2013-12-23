@@ -1,28 +1,58 @@
-require 'albacore'
-require 'version'
+############################################################
+#                      Configuration
 
 ASSEMBLY_INFO = 'src/web/Properties/AssemblyInfo.cs'
 SOLUTION_FILE = 'SimpleBudget.sln'
 
-task :default => [ :version, :build, :test ]
+############################################################
+#                          Libs
+require 'bundler/setup'
 
-desc 'Increment the file and assembly version'
-assemblyinfo :version do |asm|
-  asm.version = '1.0.0'
-  asm.file_version = '1.0.0'
-  asm.input_file = ASSEMBLY_INFO
-  asm.output_file = ASSEMBLY_INFO
+require 'albacore'
+require 'albacore/tasks/versionizer'
+require 'albacore/ext/teamcity'
+
+
+############################################################
+#                          Tasks
+
+Albacore::Tasks::Versionizer.new :versioning
+
+# WTF doesn't this work? It is EXACTLY the same code as in the documentation
+#desc "Create a sample assembly info file"
+#assemblyinfo :version do |cmd|
+#  cmd.version = "1.0.0"
+#  cmd.company_name = "ACME"
+#  cmd.product_name = "Foo Suite"
+#  cmd.title = "The Foo Assembly"
+#  cmd.description = "A useful description of the assembly."
+#  cmd.copyright = "(c) 2013 by ACME"
+#  cmd.output_file = "source/AssemblyInfo.cs"
+#end
+
+desc 'Perform fast build (warn: doesn\'t d/l deps)'
+build :quick_build do |b|
+  b.logging = 'detailed'
+  b.sln     = SOLUTION_FILE
 end
 
-desc 'Build the solution in the Release configuration'
-msbuild :build do |msb|
-  msb.solution = SOLUTION_FILE
-  msb.targets = [ :Clean, :Build ]
-  msb.properties = { :Configuration => 'Release' }
+#desc 'restore all nugets as per the packages.config files'
+#nugets_restore :restore do |p|
+#  p.out = 'src/packages'
+#  p.exe = 'buildsupport/NuGet.exe'
+#end
+
+desc 'Perform full build'
+build :build => [:versioning] do |b|
+  b.sln = SOLUTION_FILE
+  # alt: b.file = SOLUTION_FILE
 end
 
-desc 'Run all of the nunit test assemblies'
-nunit :test do |nunit|
-  nunit.command = 'path/to/nunit-console.exe'
-  nunit.assemblies = Dir.glob '**/bin/Release/*.Tests.dll'
-end
+task :default => :quick_build
+
+
+#desc 'Run all of the nunit test assemblies'
+#nunit :test do |nunit|
+#  nunit.command = 'path/to/nunit-console.exe'
+#  nunit.assemblies = Dir.glob '**/bin/Release/*.Tests.dll'
+#end

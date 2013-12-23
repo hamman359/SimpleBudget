@@ -1,4 +1,0 @@
-C:\Code\SimpleBudget\src\lib\core\bin\Debug\SimpleBudget.Core.dll
-C:\Code\SimpleBudget\src\lib\core\bin\Debug\SimpleBudget.Core.pdb
-C:\Code\SimpleBudget\src\lib\core\obj\Debug\SimpleBudget.Core.dll
-C:\Code\SimpleBudget\src\lib\core\obj\Debug\SimpleBudget.Core.pdb
